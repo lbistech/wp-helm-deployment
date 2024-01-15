@@ -1,0 +1,9 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: aws-efs-sc
+  namespace: wordpress
+provisioner: efs.csi.aws.com
+parameters:
+  provisioningMode: "efs-ap"
+  fileSystemId: "fs-03adf270e5f41d622"
